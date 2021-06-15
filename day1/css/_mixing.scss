@@ -1,0 +1,11 @@
+@mixin flexproperty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin commoncode($par1){
+    letter-spacing: $par1;
+    font-family: Arial, Helvetica, sans-serif;   
+    text-transform: uppercase;
+}

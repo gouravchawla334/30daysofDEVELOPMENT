@@ -1,0 +1,48 @@
+// 1. Use operators like +,-,*,/
+//2. Variables
+//3. nesting
+// 4. mixing
+// 5. parameter
+// 6. partials
+
+@import "mixing";
+@import "var";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $bg-color;
+}
+
+header{
+    @include flexproperty;
+    .container{
+        @include flexproperty;
+        background-color: aliceblue;
+        width: 800px;
+        height: 300px;
+        h2{
+            color: aquamarine;
+        }
+    }
+    .container:hover{
+        @include commoncode(0.3rem);
+        background-color: brown;
+        color: whitesmoke;
+    }
+    p{
+        color: $text-color;
+        place-items: center;
+    }
+}
+h1{
+    color: $heading-color;
+    // margin: 200px 200px 200px 200px;
+    font-size: 5rem + 5rem;
+    &:hover{
+        @include commoncode(.8rem);
+        color: yellow;
+    }
+}
