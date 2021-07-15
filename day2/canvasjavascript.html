@@ -1,0 +1,102 @@
+<html>
+<head>
+ <style>
+canvas{
+	border : 2px solid brown;
+}
+p{color:white;}
+button{background-color:blue;color:yellow;}
+body{
+width:100%;
+height:100vh;
+background-image: url("LOGOGOOD1.png"),url("images.jpg");
+background-repeat:no-repeat;
+background-size:350px,cover;
+background-position:right top,0% 0%;
+}
+
+</style>
+<script>
+function dis(){
+	var v=document.getElementById("mycanvas");
+	var con=v.getContext("2d");
+	con.fillStyle = "orange";
+	con.fillRect(10,10,100,100);
+	con.fillStyle="brown";
+	con.fillRect(20,20,120,120);
+		
+	// for making text
+	con.fillStyle="green";
+	con.font="bold  50px Arial";
+	con.fillText("GOURAV" ,80,80);
+	con.strokeText("CHAWLA ",80,120);
+		
+	//for making line
+	con.moveTo(0,0);
+	con.lineTo(300,150);
+	con.stroke();
+	//for making circle
+	con.beginPath();
+	con.arc(95,50,40,0,2*Math.PI);
+	con.stroke();
+}
+function dis1()
+{
+	var r=document.getElementById("myc");
+	var con=r.getContext("2d");
+	con.fillStyle = "orange";
+	con.fillRect(10,10,100,100);
+	con.fillStyle="brown";
+	con.fillRect(20,20,120,120);
+}
+function dis2()
+{// for making text	
+	var q=document.getElementById("myca");
+	var con=q.getContext("2d");
+	con.fillStyle="green";
+	con.font="bold  50px Arial";
+	con.fillText("GOURAV" ,30,50);
+	con.strokeText("CHAWLA ",30,100);
+}
+function dis3()
+{	
+	var s=document.getElementById("mycar");
+	var con=s.getContext("2d");
+		//for making line
+	con.moveTo(0,0);
+	con.lineTo(300,150);
+	con.stroke();
+}
+function dis4()
+{
+var a=document.getElementById("mycan");
+var con=a.getContext("2d");
+con.fillStyle="green";
+con.fillRect(10,10,100,100);
+ }
+
+</script>
+</head>
+<body >
+<canvas id="mycanvas"> </canvas><br>
+<button onclick="dis();"> BUTTON 1</button><br>
+<p>COMPLETE DEMO....... </p>
+
+<canvas id="mycan"></canvas><br>
+<button onclick="dis4();"> BUTTON 2</button>
+<p> SINGLE RECTANGLE</p>
+
+<canvas id="myc"> </canvas><br>
+<button onclick="dis1();"> BUTTON 3</button><br>
+<p> COMPLETE RECTANGLE[TWO RECTANGLE]</p>
+
+<canvas id="myca"> </canvas><br>
+<button onclick="dis2();"> BUTTON 4</button><br>
+<p> TEXT  </p>
+
+<canvas id="mycar"> </canvas><br>
+<button onclick="dis3();" > BUTTON 5</button><br>
+<p>  CENTER LINE</p>
+
+</body>
+</html>
