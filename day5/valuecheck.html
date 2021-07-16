@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>value check</title></head>
+<style>
+body
+{
+margin:0;
+padding:0;
+color:black;
+font-family:Beri Serif;
+	background-color:aqua;
+	background-image: url("LOGOGOOD1.png");
+	background-repeat:no-repeat;
+	background-size:190px;
+	background-position:left top;
+	
+}
+h1{
+color:blue;}
+h2{
+color:blue;}
+button
+{
+background-color:red;
+margin:15px;padding:15px;
+color:yellow;
+}
+#t1
+{
+background-color:grey;
+color:yellow;
+}
+#t2
+{
+background-color:grey;
+color:yellow;
+}
+
+</style>
+<script>
+function display()
+{
+var a=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+if(a<b)
+{
+document.write("a is less than b");
+}
+else if(a>b)
+{document.write("b is greater than a");}
+else if(a==b)
+{document.write("a is equal to b");}
+else
+{document.write("ENTER A VALID TEXT..");}
+
+}
+</script>
+</head>
+<body >
+<article style="width:65%; float:left; padding:20px;">
+<h1>COMPUTER</h1>
+<p>Computer is a electronic device  that can be instructed to carry out an arbitary set of arithmetic or logical operations automatically.
+THE ABILITY OF COMPUTERS TO FOLLOW THE SEQUENCE OF OPERATIONS, CALLED A PROGRAM,MAKE COMPUTERS APPLICAPLE TO A WIDE RANGE OF TASKS.</p>
+</article>
+<aside style= "width: 25%; float: left;  bgcolor : red;  padding: 20px;">
+<h1> LAPTOPS</h1>
+<p>Computer is a electronic device  that can be instructed to carry out an arbitary set of arithmetic or logical operations automatically.
+THE ABILITY OF COMPUTERS TO FOLLOW THE SEQUENCE OF OPERATIONS, CALLED A PROGRAM,MAKE COMPUTERS APPLICAPLE TO A WIDE RANGE OF TASKS.</p></aside><br><br><br><br><br>
+<h2>ENTER SOME NUMBER HERE </h2><br>
+<b>Enter A:</b><input type="text" id="t1"><br><br><br>
+<b>Enter B:</b><input type="text" id="t2"><br><br>
+<button onclick="display();"> Submit  <br></button>
+<br><br><br>
+</body>
+</html>
