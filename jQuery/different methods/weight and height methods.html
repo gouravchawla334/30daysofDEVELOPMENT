@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>body{font-family:Miriam Fixed;color:white;background-color:black;}
+.red{color:red;}
+h1{color:white;font-family:Old English Text MT;align-items:center;}
+#box2{padding:30px;margin:20px;background-color:lightgreen;border:30px solid grey}
+</style>
+</head>
+<body>
+<h1>Gourav Creations</h1>
+<div id="box2">
+<h2>TEXT BOX</h2>
+<p>Hello and welcome to my world</p>
+<p>here we copy the content</p>
+</div>
+<br><button id="widthbtton">WIDTH</button>
+<button id="heightbtton">HEIGHT</button>
+
+<br><br><br>
+
+<ul>
+<li>width()..width of text placed</li>
+<li>innerwidth().. width from where border starts</li>
+<li>outerWidth().. width from where border ends</li>
+<li>outerWidth(true)..complete width of a div with padding outside it.</li>
+<br><br>
+<li>height()..height of text placed</li>
+<li>innerheight().. height from where border starts</li>
+<li>outerheight().. height from where border starts</li>
+<li>outerHeight(true)..complete height of a div with padding outside it.</li>
+</ul>
+
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#widthbtton').click(function(){	
+	$('#box2').width("1000px");
+		
+		console.log("WIDTH : "+ $('#box2').width());
+		console.log("INNER WIDTH : "+ $('#box2').innerWidth());
+		console.log("OUTER WIDTH : "+ $('#box2').outerWidth());
+		console.log("OUTER WIDTH  TRUE : "+ $('#box2').outerWidth(true));
+
+	});
+	$('#heightbtton').click(function(){
+		console.clear();
+		console.log("HEIGHT : "+ $('#box2').height());
+		console.log("INNER HEIGHT : "+ $('#box2').innerHeight());
+		console.log("OUTER HEIGHT : "+ $('#box2').outerHeight());
+		console.log("OUTER HEIGHT  TRUE : "+ $('#box2').outerHeight(true));
+
+	});
+
+});
+</script>
+</body>
+</html>

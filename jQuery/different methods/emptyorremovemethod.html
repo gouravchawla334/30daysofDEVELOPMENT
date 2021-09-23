@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+h1{text-align:center;}
+h2 u{color:brown;}
+#box1{padding:10px;border:1px solid green}
+#box2{padding:10px;border:1px solid green}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+<div id='box1'><pre>
+EMPTY METHOD : if we want to empty the content of div then we use empty().
+REMOVE METHOD : if we want to remove the div or any other tag then we use remove().
+</pre></div><br>
+
+<div id="box2">
+<h2><u>text box</u></h2>
+<p>Hello and welcome to my world</p>
+<br>
+<button id="appendbtton"> EMPTY</button>
+<button id="prependbtton">REMOVE</button>
+</div>
+<br>
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#appendbtton').click(function(){
+		$('#box2').empty();
+	});
+	
+	$('#prependbtton').click(function(){
+		$('h1').remove();
+	});
+});
+</script>
+</body>
+</html>

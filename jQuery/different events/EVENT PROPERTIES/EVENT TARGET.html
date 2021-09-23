@@ -1,0 +1,30 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+h2{color:aqua}
+h4{text-align:center;}
+</style>
+</head>
+<body>
+<h1>EVENT TARGET PROPERTY</h1><br>
+<div id="text2">
+<h2>TEXT BOX</h2>
+<p>asdf asdf ghjkl asdf ghjkl aqwezxcrtbv asdsf ghjkl asdf ghjkala </p>
+<button>text button</button>
+</div>
+<br>
+
+<br>
+<h3></h3>
+</body>
+<script src="./JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#text2').on("click",function(event){
+	$('h2').html("Target Element : " + event.target.nodeName);
+	});
+});
+</script>
+</body>
+</html> 

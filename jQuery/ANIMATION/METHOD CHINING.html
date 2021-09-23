@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<style>
+		#box {
+			background: pink;
+			border: 3px solid black
+		}
+
+		.red {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>GOURAV CREATIONS</h1>
+
+	<div id="box" class="text">
+		<h2 class="heading">text box</h2>
+		<p>WELCOME TO MY WORLD......</p>
+	</div>
+	<br>
+	<button id="clickbutton">ANIMATE</button>
+
+	<script src="..\JQUERY.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#clickbutton').click(function () {
+				$('#box').animate({
+					left: '95px'
+				}).css('background', 'aqua').slideUp().slideDown().animate({
+					fontSize: '25px',
+					fontFamily: 'Miriam'
+				}).animate({
+					borderWidth: '10px'
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
+<ul>
+	<li><b>method Chaining</b></li>
+	<ol>
+		<ul>
+			<li>$(selector).method(); &nbsp; $('#box').css('color','red');</li>
+		</ul>
+	</ol><br><br>
+	<ol>
+		<ul>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+			&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$('#box').slideUp();</ul>
+	</ol>
+	<ol>
+		<ul>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+			&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$('#box').slideDown();</ul>
+	</ol><br><br>
+	<ol>
+		<ul>
+			<li>$(selector).css('color','red').slideUp().slideDown();</li>
+		</ul>
+	</ol>
+</ul>

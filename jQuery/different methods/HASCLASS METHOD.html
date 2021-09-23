@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+#box{background:pink;border:3px solid black}
+.red{color:red;}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box" class="text">
+<h2 class="heading">text box</h2>
+<p>WELCOME TO MY WORLD......</p>
+</div>
+<br>
+<button id="clickbutton">has class</button>
+
+<script src="..\JQUERY.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#clickbutton').click(function(){
+			console.log($('h2').hasClass('heading'));		
+		});
+	});	
+</script>
+</body>
+</html>
+<ul>
+<li>hasclass()</li>
+<ol><ul>It is used to check whether there is class present in a particular tag</ul></ol>
+</ul>

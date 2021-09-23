@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+h1{text-align:center;}
+h2 u{color:brown;}
+
+#box2{background-color:green;padding:10px;border:1px solid green}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box2">
+<h2><u>Text box</u></h2>
+<p>Hello and welcome to my world</p>
+<br>
+<button id="positionbtton">	POSITION</button>
+<button id="offsetbtton">OFFSET</button>
+</div>
+<br>
+<pre>
+POSITION METHOD : GIVE POSITION OF PARAGRAPH FROM WHERE IT IS STARTED.[It is relative to it's parent element]
+OFFSET METHOD : Relative to the document
+<br>
+Position & Offset get Value:<ul><li>top</li><li>left</li></ui>
+</pre><br>
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#positionbtton').click(function(){
+		console.log($('#box2 h2').position());
+	});
+	
+	$('#offsetbtton').click(function(){
+		console.log($('#box2 h2').offset());
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<style>
+#box{width:30%;height:100px;background:pink;border:1px solid black;padding:10px;overflow:auto;}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS FORM EVENTS</h1>
+<form action="" id="sform">
+<label for="">NAME</label>
+	<input type="email" id="sname"><br><br>
+<label for="">CLASS</label>
+	<input type="text" id="sclass"><br><br>
+<label for="">COUNTRY</label>
+<select id="scountry">
+<option value="India">INDIA</option>
+<option value="Srilanka">SRI LANKA</option>
+<option value="japan">JAPAN</option>
+<option value="u.s.a">U.S.A</option>
+<option value="nepal">NEPAL</option>
+</select>
+<br><br>
+<input type="submit">
+</form>
+
+<div id="text" style="border:1px solid red;margin-top:20px;"></div>
+<script src="..\JQUERY.js"></script>
+<script>
+	$(document).ready(function(){
+		//focus  event
+		$('#sname').focus(function(){
+			$(this).css('background-color','orange');
+		});
+		$('#sclass').focus(function(){
+			$(this).css('background-color','grey');
+		});
+		$('#scountry').focus(function(){
+			$(this).css('background-color','green');
+		});
+
+	//blur  event
+		$('#sname,#sclass,scountry').blur(function(){
+			$(this).css('background-color','lime');
+		});
+	//change event--this is only with select tag
+		$('#scountry').change(function(){
+			$(this).css('background','blue');
+		});
+	//for printing the value select box
+	$('#scountry').change(function(){
+		var a=$(this).val();	
+		$('#text').html(a);
+		});
+		
+	//select event
+		$('#sname,#sclass').select(function(){
+			$(this).css('background','orange');
+		});
+
+	//submit event
+		$('#sform').submit(function(){
+			alert('form submitted');
+		});
+	//val event
+		$('#sform').submit(function(){
+			var v=$('#sname').val();	
+			var va=$('#sclass').val();
+			var val=$('#scountry').val();
+			//alert("hello" + v );
+			//alert("class" + va);
+			//alert("country" + val);		or written as 
+			alert(' hello ' +v  + ' class : ' + va + '  country :  ' + val)
+		});	
+	//val event
+		$('#sname').val('GOURAV CREATIONS');
+		$('#sclass').val('B.TECH');	
+				
+	});
+</script>
+<br><br><br>
+<h2>DIFFERENT FORM EVENTS</h2>
+<ul>
+	<li>focus()</li>
+	<li>blur()</li>
+	<li>change()  ------work with select box.</li>
+	<li>select()</li>
+	<li>submit()</li>
+	<li>val()</li>
+
+</ul>
+
+</body>
+</html>

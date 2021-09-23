@@ -1,0 +1,19 @@
+<script>
+$(document).ready(function(){
+---------------   --------------------------
+[selector		method()
+			
+target DOM element	    what work
+
+function() ]
+---->if we want to access the inner html of adiv which is assign a id then we can do this
+var a=$("TEXT").html();
+console.log(a); 	
+});
+
+or
+$(function(){
+
+});
+
+</script>

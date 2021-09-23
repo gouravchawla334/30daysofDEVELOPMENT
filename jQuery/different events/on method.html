@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+h1{text-align:center;}
+.bg{background-color:pink;}
+</style>
+</head>
+<body>
+<h1> off on method</h1>
+<br>
+<div id="text2"> 
+<p>aaaa ssss dddd fff ggg hhhh jjj kkk kkk llll ;;; 
+aaaa ssss dddd fff ggg hhhh jjj kkk kkk llll ;;; 
+aaaa<span> ssss</span>, dddd fff ggg hhhh jjj kkk kkk llll ;;; </p>
+</div>
+<h3></h3>
+<button id="button">OFF BUTTON</button>
+<pre>$().on({
+	click:function(){
+
+	},
+	mouseenter:function(){
+
+	},
+});
+</pre>
+</body>
+<script src="..\JQUERY.js"></script>
+//<script>
+//$(document).ready(function(){
+	//$('#text2').on("mouseover mouseout",function(){
+	//	$(this).toggleClass("bg");
+ 	//});
+//});
+//</script>
+<script>
+$(document).ready(function(){
+	$('#text2').on({
+		"click" : function(){
+		$(this).css("background","red");
+		},
+		"mouseover" : function(){
+		$(this).css("background","orange");
+		},
+		"mouseout" : function(){
+		$(this).css("background","green");
+		},
+		"dblclick" : function(){
+		$(this).css("background","grey");
+		},
+	});
+	$("h1").on({
+		"click" : function(){
+		$(this).css("background","red");
+		},
+		"mouseover" : function(){
+		$(this).css("background","orange");
+		},
+		"mouseout" : function(){
+		$(this).css("background","green");
+		},
+	});
+	$("button").on({
+		"click" : function(){
+			$(this).css("background","aqua");
+		},
+	});
+	$("#button").click(function(){
+		$("#text2").off("mouseover" ,"mouseout")
+	});
+});
+</script>
+</body>
+</html> 

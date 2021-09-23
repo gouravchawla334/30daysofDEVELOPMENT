@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+#box{width:30%;height:100px;background:pink;border:1px solid black;padding:10px;overflow:auto;}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box">
+
+<h2>text box</h2>
+<p>WELCOME TO MY WORLD
+<br>
+<br>
+
+......aaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ssssssssssssssssssssssssssssss
+ddddddddddddddddddddddd
+gggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggg
+ggggggggggggggggggggggggggg
+
+ffffffffffffffffffffffffffffffff
+gggggggggggggg
+</p>
+</div>
+
+<h3>DIFFERENT WINDOW EVENTS</h3>
+<ul>
+ <li>load()		    ----removed from version 3.0</li>
+<li>unload()	   ----removed from version 3.0</li>
+<li>resize()</li>
+<li>scroll()</li>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b>it's just an example to put a scroll bar </b><br><br><br><br><br><br><br><br><br><br><br><br>
+</ul>
+
+<script src="..\JQUERY.js"></script>
+<script>
+	$(document).ready(function(){
+		//WINDOW SCROLLING  event
+		$(window).scroll(function(){
+			console.log('HEY YOU ARE SCROLLING THE WINDOW....');
+		});
+	//DIV SCROLLING  event
+		$('#box').scroll(function(){
+			console.log('HEY YOU ARE SCROLLING THE div box WINDOW....');
+		});
+	//RESIZING event
+		$('#box').resize(function(){
+			console.log('HEY YOU ARE RESIZINGTHE div box WINDOW....');
+		});
+	//RESIZING  WINDOW event
+		$(window).resize(function(){
+			console.log('HEY YOU ARE RESIZINGTHE WINDOW....');
+		});
+
+	//RESIZING event
+		$('#box').resize(function(){
+			console.log('HEY YOU ARE RESIZINGTHE div box WINDOW....');
+		});			
+	});
+</script>
+
+</body>
+</html>

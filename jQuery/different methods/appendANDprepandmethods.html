@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+h1{text-align:center;}
+h2 u{color:brown;}
+#box1{padding:10px;border:1px solid green}
+#box2{padding:10px;border:1px solid green}
+#box3{padding:10px;border:1px solid green}
+
+
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+<div id='box1'><pre>
+APPEND METHOD : if we want to add a heading at the end of a div then we use append().
+PREPEND METHOD : if we want to add a heading at the starting of a div then we use prepend().
+</pre></div><br>
+
+<div id="box2">
+<h2><u>text box</u></h2>
+<p>Hello and welcome to my world</p>
+<br>
+<button id="appendbtton"> APPEND</button>
+<button id="prependbtton"> PREPEND</button>
+</div>
+<br><br><br>
+
+
+<div id="box3">
+<ol>
+<li>APPEND METHOD </li>
+<li>PREPEND METHOD </li>
+</ol>
+<button id="appendbutton"> APPEND</button>
+<button id="prependbutton"> PREPEND</button>
+</div>
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#appendbtton').click(function(){
+		$('#box2').append('<h3>heading added from append</h3>');
+	});
+	
+	$('#prependbtton').click(function(){
+		$('#box2').prepend('<h2>heading added from prepend</h2>');
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$('#appendbutton').click(function(){
+		$('ol').append('<li>new append</li>');
+	});
+	
+	$('#prependbutton').click(function(){
+		$('ol').prepend('<li>prepand new</li>');
+	});
+});
+</script>
+</body>
+</html>

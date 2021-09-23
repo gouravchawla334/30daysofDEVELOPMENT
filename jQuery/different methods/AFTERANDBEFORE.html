@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+h1{text-align:center;}
+h2 u{color:brown;}
+#box1{padding:10px;border:1px solid green}
+#box2{padding:10px;border:1px solid green}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+<div id='box1'><pre>
+AFTER METHOD : if we want to add a heading at the end of a div [outside]then we use after().
+BEFORE METHOD : if we want to add a heading at the starting of a [divoutside] then we use before().
+</pre></div><br>
+
+<div id="box2">
+<h2><u>text box</u></h2>
+<p>Hello and welcome to my world</p>
+<br>
+<button id="appendbtton"> AFTER</button>
+<button id="prependbtton">BEFORE</button>
+</div>
+<br>
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#appendbtton').click(function(){
+		$('#box2').after('<h3>heading added :AFTER</h3>');
+	});
+	
+	$('#prependbtton').click(function(){
+		$('#box2').before('<h2>heading added :BEFORE</h2>');
+	});
+});
+</script>
+</body>
+</html>

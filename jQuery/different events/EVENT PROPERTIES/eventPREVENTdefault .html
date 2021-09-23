@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+h2{color:aqua}
+h4{text-align:center;}
+</style>
+</head>
+<body>
+<h1>EVENT PREVENT DEFAULT PROPERTY</h1>
+<ul>IT IS USED TO STOP THE DEFAULT WORKING OF ANCHOR TAG..</UL>
+<br>
+<div id="text2">
+<a href="http://www.gouravcreations.com" id="first">GOURAV CREATIONS SITE[prevent default]</a>
+<br><br><br><a href="http://www.gouravcreations.com" >GOURAV CREATIONS SITE</a>
+</div>
+<h3></h3>
+</body>
+<script src="JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#first').click(function(event){
+		event.preventDefault();
+
+		//is Defaultprevented is checkwhether a site contain default prevent method...
+
+		var a = event.isDefaultPrevented();
+		$('h3').html(a);
+	});
+});
+</script>
+</body>
+</html> 

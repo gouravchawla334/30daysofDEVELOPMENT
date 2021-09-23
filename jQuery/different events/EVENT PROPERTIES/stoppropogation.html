@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+</style>
+</head>
+<body>
+<h1>EVENT STOP PROPOGATION PROPERTY</h1><br>
+<div id="text2">
+<h2>TEXT BOX</h2>
+<p>asdf asdf ghjkl asdf ghjkl aqwezxcrtbv asdsf ghjkl asdf ghjkala </p>
+<button>text button</button>
+</div>
+<br>
+
+<br>
+<h3></h3>
+</body>
+<script src="C:\Users\pp\Desktop\WEB DEVELOPMENT\jQuery\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#text2').click(function(){
+		alert("box");
+	});
+	$('h2').click(function(e){
+		//e.stopPropagation();   //this is for stoping the bubbling
+		alert("h2 " + e.isPropagationStopped());
+	});
+	$('p').click(function(e){
+		e.stopPropagation();   //this is for stoping the bubbling
+		alert("p   " + e.isPropagationStopped());
+	});
+});
+</script>
+</body>
+</html> 

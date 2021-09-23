@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+h1{text-align:center;}
+</style>
+</head>
+<body>
+<h1>EVENT .DATA PROPERTY</h1>
+<br>
+<div id="text2"> 
+<p>aaaa ssss dddd fff ggg hhhh jjj kkk kkk llll ;;; </p>
+<p>aaaa ssss dddd fff ggg hhhh jjj kkk kkk llll ;;; </p>
+<p>aaaa ssss dddd fff ggg hhhh jjj kkk kkk llll ;;; </p>
+</div>
+<h3></h3>
+</body>
+<script src="JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('p').each(function(e){
+		$(this).on("click",{v:e},function(event){
+			alert(event.data.v);
+		});
+	});
+});
+</script>
+</body>
+</html> 

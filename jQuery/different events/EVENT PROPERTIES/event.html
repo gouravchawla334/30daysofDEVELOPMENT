@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+#text{width:400px;height:150px;background-color:pink;border:1px solid grey;}
+#text1{width:50px;height:50px;background-color:yellow;border:1px solid grey;}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+FIRST DIV FOR PAGEX AND PAGEY EVENT.<br>
+<div id="text">MOVE IN SILENCE....</div><br><br>
+<div id="text1">G C </div>
+<br><br><br>
+
+
+<h3>jQuery Event Object : Property and Methods</h3>
+<ul>
+<li>event.pageX</li>
+<li>event.pageY</li>
+<li>event.type</li>
+<li>event.which</li>
+<li>event.target</li>
+<li>event.preventDefault()</li>
+<li>event.isDefaultPrevented()</li>
+<li>event.stopPropagation()</li>
+<li>event.isPropagationStopped()</li>
+<li>event.data</li>
+</ul>
+
+<script src="JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+		$(document).mousemove(function(event){
+			$('#text').text("   X  : " + event.pageX  + "  Y :  " + event.pageY);
+			
+			var x = event.pageX;
+			var y = event.pageY;
+	
+			$('#text1').offset({top:y,left:x}); 
+		
+		});
+});
+</script>
+</body>
+</html>

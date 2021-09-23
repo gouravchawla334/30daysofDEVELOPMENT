@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>body{font-family:Miriam Fixed;color:white;background-color:black;}
+h1{color:white;font-family:Old English Text MT;align:center}
+#box2{padding:10px;width:200px;height:200px;background-color:lightgreen;border:3px solid brown;}
+p{color:blue}
+</style>
+</head>
+<body>
+<h1>Gourav Creations</h1>
+<div id="box2">
+<h2>Move In Silence</h2>
+<p>THIS IS SAMPLE PARAGRARH</p>
+</div><br>
+<button id="HIDE">slide down</button>
+<button id="SHOW">slide up</button>
+<button id="SHOW1">  slideTOGGLE</button>
+<br><br>
+<br>
+<ul>
+<li>slideDown</li>
+<li>slideUp</li>
+<li>slidetoggle</li>
+</ul>
+<script src="C:\Users\pp\Desktop\WEB DEVELOPMENT\jQuery\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#HIDE').click(function(){	
+		$('#box2').slideDown(2000);
+	});
+	$('#SHOW').click(function(){	
+		$('#box2').slideUp(2000);
+		//we can use here a functionfor console log
+	});
+	$('#SHOW1').click(function(){	
+		$('#box2').slideToggle(1000);
+		$('#box2 ').animate({fontSize: '25px'},2000);
+	});
+	$('#SHOW12').click(function(){	
+		$('#box2 p').fadeTo(1000,0.5,function(){
+			console.log("now it is fade to");
+		});
+	});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+#box{padding:10px;border:1px solid black;}
+.first{background : tan;}
+.second{background:pink;}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box">
+
+<h2>text box</h2>
+<p>WELCOME TO MY WORLD......</p>
+</div>
+<br>
+<button id="addbutton"> ADD CLASS</button>
+<button id="removebutton"> REMOVE CLASS</button>
+<button id="togglebutton"> TOGGLE CLASS</button>
+<br><br><br>
+<h4>TO ADD/REMOVE/AND VICE-VERSA..</h4>
+
+<ul>
+<li>addclass()</li>
+<li>removeclass()</li>
+<li>toggleclass()</li>
+</ul>
+<script src="..\JQUERY.js"></script>
+<script>
+	$('#addbutton').click(function(){
+		$('#box ,h1').addClass("first second");
+	});
+	$('#removebutton').click(function(){
+		$('#box').removeClass("second");
+	});
+	//for interchanging the class function 
+	$('#togglebutton').click(function(){
+		$('#box').toggleClass("second");
+	});
+
+</script>		
+</body>
+</html>

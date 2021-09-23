@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+#d{width:400px;height:150px;border:1px solid grey;}
+h2{color:aqua}
+h4{text-align:center;}
+</style>
+</head>
+<body>
+<h1>EVENT WHICH PROPERTY</h1><br>
+<ul><li>IT IS USED TO DETERMINE WHAT TYPE OF CLICK IS DONE[EITHER LEFT/RIGHT/CENTER]</li></ul>
+<h2></h2>
+<div id="d">
+<h4>KEYDOWN</h4>
+<ol><li>A-Z---------------> ASCII VALUE[]65-90]</li><li>0-9---------------> ASCII VALUE[48-57]</li><li>SPECIAL CHARACTERS----> ASCII VALUE[32-96]</li></ol>
+</div>
+<br><br>
+<div id="text2"></div><br>
+<input type="text" id="inputbox">
+<br>
+
+</body>
+<script src="JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#text2').on("click dblclick mouseover mouseout",function(event){
+	$('h2').html("Event: " + event.type + ":" + event.which);
+	});
+	$('#inputbox').on("keydown",function(){
+		$('h2').html("Event: " + event.type + ":" + event.which);
+	
+	});
+});
+</script>
+</body>
+</html>

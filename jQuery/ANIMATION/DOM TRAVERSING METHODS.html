@@ -1,0 +1,271 @@
+<html>
+
+<head>
+	<style>
+		#m {
+			width: 1000px;
+			height: 650px;
+			margin: 30px;
+			padding: 20px;
+			border: 1px solid black;
+			background: grey;
+		}
+
+		#outer {
+			width: 900;
+			height: 500;
+			margin: 20px;
+			padding: 20px;
+			align-items: center;
+			border: 1px solid black;
+			background: yellow;
+		}
+
+		#inner {
+			width: 700;
+			height: 350px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: pink;
+		}
+
+		#child-a {
+			width: 50px;
+			height: 100px;
+			margin: 10px;
+			padding: 50px;
+			text-align: center;
+			border: 1px solid black;
+			background: white;
+			float: left;
+		}
+
+		#child-b {
+			width: 50px;
+			height: 100px;
+			margin: 10px;
+			padding: 50px;
+			text-align: center;
+			border: 1px solid black;
+			background: white;
+			float: left;
+		}
+
+		#child-c {
+			width: 50px;
+			height: 100px;
+			margin: 10px;
+			padding: 50px;
+			text-align: center;
+			border: 1px solid black;
+			background: white;
+			float: left;
+			position: relative;
+		}
+
+		#child-d {
+			width: 50px;
+			height: 100px;
+			margin: 10px;
+			padding: 50px;
+			text-align: center;
+			border: 1px solid black;
+			background: white;
+			float: left;
+		}
+
+		#first {
+			width: 300;
+			height: 150px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: yellow;
+		}
+
+		#second {
+			width: 300;
+			height: 150px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: orange;
+		}
+
+		#ul-1 {
+			width: 300;
+			height: 150px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Gourav Creations</h1>
+	<div id="m">
+		<h2>Main Outer</h2>
+		<div id="outer">
+			<h2 class="text">Outer</h2>
+			<div id="inner">
+				<h2 id="child-head">Inner</h2>
+				<div id="child-a">A</div>
+				<div id="child-b">B</div>
+				<div id="child-c" class="text">C</div>
+				<div id="child-d">D</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<h3>DOM Traversing Methods</h3>
+	<ul>
+		<li>Ancestors methods</li><br>
+		<p>HERE WE CAN TARGET THE PARENT TAG WITH THE HELP OF THEIR CHILD</p>
+		<ol>
+			<li>parent </li>
+			<li>grandparent</li>
+			<li>great-grandparent</li>
+		</ol><br>
+		<h4>these methods are implemented</h4>
+		<ul>
+			<li>parent()</li>
+			<li>parents()</li>
+			<li>parentsUntil()..HERE WE CAN GIVE LIMIT</li>
+			<li>closest()</li>
+			<li>offsetParent()....IT IS USED ONLY WITH THE TAG WHICH IS STYLING OF POSITION ABSOLUTE STYLE</li>
+		</ul><br>
+
+		<li>Descendants methods</li><br>
+		<p>HERE WE CAN TARGET THE PARENT TAG WITH THE HELP OF THEIR CHILD</p>
+		<ol>
+			<li>child</li>
+			<li>grandchild</li>
+			<li>great-grandchild</li>
+		</ol><br>
+		<h4>these methods are implemented</h4>
+		<ul>
+			<li>children()..IT TARGET ONLY THE IMMIDIATE CHILDREN </li>
+			<li>find()..IT TARGET ALL THE CHILDREN </li>
+		</ul><br>
+
+		<li>siblings methods</li><br>
+		<p>HERE WE TARGET THE SIBLINGS OF TAG </p>
+		<ol>
+			<li>SAME PARENT</li>
+		</ol><br>
+		<h4>these methods are implemented</h4>
+		<ul>
+			<li>siblings()</li>
+			<li>next()</li>
+			<li>nextAll()</li>
+			<li>nextUntill()</li>
+			<li>prev()</li>
+			<li>prevAll()</li>
+			<li>prevUntill()</li>
+		</ul><br>
+
+		<li>Filtering methods</li>
+		<h4>These methods are implemented</h4>
+		<ul>
+			<li>first()</li>
+			<li>last()</li>
+			<li>eq()</li>
+			<li>filter()</li>
+			<li>not()</li>
+			<li>slice()</li>
+		</ul><br>
+	</ul>
+
+	<h1>JQUERY FIILTERING METHODS</h1>
+	<div id="first">
+		<p>Hello and wolcome to my world</p>
+		<p>THIS IS GOURAV CREATIONS...!!!!!!!!!!!!!!!!!!</p>
+	</div>
+	<div id="ul-1">
+		<ul>
+			<li>ORANGE</li>
+			<li>MANGO</li>
+			<li>APPLE</li>
+			<li>MANGO</li>
+		</ul>
+	</div>
+
+	<div id="second">
+		<p class="p1">Hello and wolcome to my world</p>
+		<p>THIS IS GOURAV CREATIONS...!!!!!!!!!!!!!!!!!!</p>
+	</div>
+
+	<script src="..\JQUERY.js"></script>
+	<script>
+		//for Ancestors methods
+		$(document).ready(function () {
+			$('#inner').parent().css('background','red');
+
+			$('#child-c').parents('#main-outer').css('background','red');
+
+			$('#m').parentsUntil("#m").css('background','red');
+
+			$("#child-c").offsetParent().css('background','red');
+
+			$("#child-c").closest('#m').css('background','red');
+		});
+	</script>
+
+	<script>
+		//for Desendants methods
+		$(document).ready(function () {
+			$('#inner').children('.text').css('background','aqua');
+
+			$('#m').find('.text').css('background','aqua');
+
+		});
+	</script>
+
+
+	<script>
+		//for siblings methods
+		$(document).ready(function () {
+			$('#m').siblings().css('background','orange');
+
+			$('#child-c').next().css('background','aqua');
+
+			$('#child-c').nextAll().css('background','aqua');
+
+			$('#child-c').prev().css('background','aqua');
+
+			$('#child-c').prevAll().css('background','aqua');
+
+			$('#child-a').nextUntil('#child-d').css('background','aqua');
+
+			$('#child-a').prevUntil().css('background','aqua');
+		});
+	</script>
+
+	<script>
+		//for filtering methods
+		$(document).ready(function () {
+			$(' #ul-1 ul li').first().css('background','pink');
+
+			$('p').last().css('background','aqua');
+
+			$('li').eq(-1).css('background','aqua');
+
+			$('p').filter('.p1').css('background','aqua');
+
+			$('p').not('.p1').css('background','aqua');
+
+			$('p').slice('-1,-3').css('background','aqua');
+
+		});
+	</script>
+
+</body>
+
+</html>

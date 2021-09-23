@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+#text1{background-color:yellow;}
+
+#text2{background-color:orange;}
+
+</style>
+</head>
+<body>
+HERE WE LEARN HOW TO CONSOLE THE DIV ELEMENT BY ITS ID
+ <h1>hello and welcome to gourav creation</h1>
+<div id="text1">
+<h2>text box1</h2>
+<p>welcome to gourav creation</p>
+</div>
+
+<div id="text2">
+<h2>text box2</h2>
+<p>welcome to gourav creation</p>
+</div>
+<script src="..\JQUERY.js"></script>
+<script>
+	$(document).ready(function(){
+	var  a= $('#text1').html();
+	console.log(a);
+	var  b= $('#text2').html();
+	console.log(b);
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<style>
+		body {
+			font-family: arial
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>hello and welcome to gourav creation</h1>
+
+	<div id="text1">
+		<h2>text box1</h2>
+		<p>welcome to gourav creation</p>
+	</div>
+
+	<div id="text2">
+		<h2>text box2</h2>
+		<p>welcome to gourav creation</p>
+	</div>
+	<pre>("#idname")	for targeting all the id
+("tagname")	for targeting all the tags
+(".classname")	for targeting all the classes
+("*")		for targeting all the tags in html
+("ul li")		for targeting all the parent and child
+(".abc ,.xyz")	for targeting all the different classes
+("h1,div,p")	for targeting all the different tag together
+("p:first")		
+("p:last")
+("li:even")	
+("li:odd")	
+("ul li:lt(2)")	for applying css in all the li lower than 2
+("ul li:gt()")	for applying css in all the li greater than 2
+("ul li:eq()")	for applying css in equation 2
+</pre>
+	<ul id="list">
+		<li class="apple">apple</li>
+		<li class="mango">mango</li>
+		<li class="orange">orange</li>
+		<li class="grapes">grapes</li>
+	</ul>
+	<script src="..\JQUERY.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("pre").css("border", "2px  solid red");
+			$("h1").css("border", "2px solid black");
+			$(".apple").css("color", "red");
+			$(".mango").css("color", "yellow");
+			$(".orange").css("color", "orange");
+			$(".grapes").css("color", "green");
+			$("ul li:lt(2)").css("border", "2px solid red");
+			$("#text1 ").css("color", "orange");
+		});
+	</script>
+</body>
+
+</html>

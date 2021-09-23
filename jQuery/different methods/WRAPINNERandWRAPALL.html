@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>body{font-family:arial}
+.red{color:red;}
+h2 u{color:brown;}
+#box{padding:10px;background-color:green;border:1px solid green}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box2">
+<h2>TEXT BOX</h2>
+<p>Hello and welcome to my world</p>
+<p>here we copy the content</p>
+</div>
+<br><button id="WRAPinnerbtton">WRAP INNER</button>
+<button id="wrapallbtton">WRAP ALL</button>
+
+<br><br><br>
+
+<pre>
+WRAPALL().... to add ONE parent to all the tags 
+WRAPINNER().... to add  parent inward of a tag
+</pre>
+
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#wrapallbtton').click(function(){
+		$('div').wrapAll('<div id="box"></div>');
+		
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$('#WRAPinnerbtton').click(function(){
+		$('h1').wrapInner('<span class="red"></span>');
+	});
+});
+</script>
+</body>
+</html>

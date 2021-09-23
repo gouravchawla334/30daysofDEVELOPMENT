@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>body{font-family:arial}
+
+h2 u{color:brown;}
+#box{padding:10px;background-color:green;border:1px solid green}
+#box2{padding:10px;background-color:grey;border:1px solid green}</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box2">
+<h2>TEXT BOX</h2>
+<p>Hello and welcome to my world</p>
+<p>here we copy the content</p>
+<p>REPLACE WITH METHOD : to replace the text and tags.</p>
+<p>REPLACE ALL METHOD : to replace the text .</p>
+<br><br><button id="appendbtton">REPLACE</button>
+</div>
+<br><br><br>
+
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#appendbtton').click(function(){
+		$('#box2 p:nth-child(5)').replaceWith('GOURAV CREATIONS');
+		$('</h1>GOURAV CREATIONS</h1>').replaceAll('#box2 p:nth-child(3)');
+	});
+});
+</script>
+</body>
+</html>

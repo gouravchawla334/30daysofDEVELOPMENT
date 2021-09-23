@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+#box{background:pink;border:3px solid black}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+<div id="box">
+<h2>text box</h2>
+<p>WELCOME TO MY WORLD......</p>
+</div>
+<h3>DIFFERENT MOUSE EVENTS</h3>
+<ul>
+ <li>click()</li>
+<li>dblclick()</li>
+<li>contextmenu()</li>
+<li>mouseenter()</li>
+<li>mouseleave()</li>
+</ul>
+<script src="..\JQUERY.js"></script>
+<script>
+	$(document).ready(function(){
+		//when we single click on it...
+
+		$("#box").click(function(){
+			$('#box').css("background-color","yellow");
+			//var a=$("#box").html();
+			//console.log(a);
+		});
+
+		
+		//for changing the color of box when we double click on it..
+
+		$("#box").dblclick(function(){
+		$('#box').css("background-color","green");
+		});
+
+		//when we right click on it...
+		$("#box").contextmenu(function(){
+		$('#box').css("background-color","blue");
+		});
+		
+		
+		//when we enter  on it...
+		$("#box").mouseenter(function(){
+		$('#box').css("background-color","tan");
+		});
+		//when we leave it...
+		$("#box").mouseleave(function(){
+		$('#box').css("background-color","purple");
+		});
+
+	});
+</script>
+
+</body>
+</html>

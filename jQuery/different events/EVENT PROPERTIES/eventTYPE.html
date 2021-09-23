@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+#text2{width:400px;height:150px;border:1px solid grey;}
+h2{color:aqua}
+</style>
+</head>
+<body>
+SECOND DIV FOR TYPE EVENT <br>
+<h2></h2>
+<div id="text2"></div><br><br>
+</body>
+<script src="JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#text2').on("click dblclick mouseover mouseout",function(event){
+	$('h2').html("Event: " + event.type)
+	});
+});
+</script>
+</body>
+</html>

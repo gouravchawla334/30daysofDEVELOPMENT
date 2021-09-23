@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>body{font-family:Miriam Fixed;color:white;background-color:black;}
+.red{color:red;}
+h1{color:white;font-family:Old English Text MT;align-items:center;}
+#box2{color:blue;padding:10px;width:200px;height:200px;background-color:lightgreen;border:3px solid brown;position:relative;}
+</style>
+</head>
+<body>
+<h1>Gourav Creations</h1>
+<div id="box2">
+<h2>Move In Silence</h2>
+<p>it is demi paragraph...</p>
+</div><br>
+<button id="animatebtton">POSITION</button>
+<button id="s">OFFSET</button>
+<br><br>
+<ol>
+<li>position-------> it is relative to its parent element</li>
+<li>offset -------> it is relative to the document</li>
+<ul><li>It get only two parameters..</li><li>top</li><li>left</li></ul>
+</ol>
+<br><br>
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#animatebtton').click(function(){	
+		//console.log($('#box2 h2').position());
+		//var x = $('#box2').position();
+		
+		//console.log(" Top : " + x.top + " Left : " + x.left);
+		// for setting the predefine values
+		$('#box2').position({top:0,left:0});
+	});
+	$('#s').click(function(){	
+		//var x = $('#box2 h2').offset();
+		//console.log("Top:" + x.top + "Left:" + x.left);
+		// for setting the predefine values
+		$('h2').offset({top:100,left:100});
+		
+	});
+});
+</script>
+</body>
+</html>

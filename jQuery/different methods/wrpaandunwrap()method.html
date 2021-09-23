@@ -1,0 +1,46 @@
+
+
+<html>
+<head>
+<style>body{font-family:arial}
+
+h2 u{color:brown;}
+#box{padding:10px;background-color:green;border:1px solid green}
+#box2{padding:10px;background-color:grey;border:1px solid green}</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+
+<div id="box2">
+<h2>TEXT BOX</h2>
+<p>Hello and welcome to my world</p>
+<p>here we copy the content</p>
+<br><button id="WRAPbtton">WRAP</button>
+<button id="appendbtton">UNWRAP</button>
+</div>
+<br><br><br>
+
+<pre>
+WRAP().... to addparent tag 
+UNWRAP().... to remove parent tag
+</pre>
+
+
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#appendbtton').click(function(){
+		$('#box2 p').unwrap();
+		
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$('#WRAPbtton').click(function(){
+		$('#box2 p').wrap('<div id="box"></div>');
+	});
+});
+</script>
+</body>
+</html>

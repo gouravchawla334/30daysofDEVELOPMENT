@@ -1,0 +1,32 @@
+<html>
+<head>
+<style></style>
+</head>
+<body>
+<h1 >Gourav Creations</h1>
+ 
+<ul>
+<li>ORANGE</li>
+<li>MANGO</li>
+<li><span>APPLE</span></li>
+<li>MANGO</li>
+</ul>
+
+<h3>EACH METHOD</h3>
+<ol><li>IT WORK LIKE A LOOP</li></ol>
+
+<script src="..\JQUERY.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('li').each(function(){
+		console.log($(this).text());
+		$(this).text('MAGIC :) ');
+	});	
+		
+
+});
+</script>
+
+</body>
+</html>

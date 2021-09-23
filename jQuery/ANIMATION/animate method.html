@@ -1,0 +1,101 @@
+<html>
+
+<head>
+	<style>
+		body {
+			font-family: Miriam Fixed;
+			color: white;
+			background-color: black;
+		}
+
+		.red {
+			color: red;
+		}
+
+		h1 {
+			color: white;
+			font-family: Old English Text MT;
+			align-items: center;
+		}
+
+		#box2 {
+			color: blue;
+			padding: 10px;
+			width: 200px;
+			height: 100px;
+			background-color: lightgreen;
+			border: 3px solid brown;
+			position: relative;
+			font-family: Old English Text MT;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Gourav Creations</h1>
+	<div id="box2">
+		<h2>Move In Silence</h2>
+	</div><br><button id="animatebtton">ANIMATE </button>
+	<br><br>
+	<ul>
+		<li>Animated method</li>
+		<li>$(selector).animated({params},speed,callback);</li>
+		<li>It supports any CSS property (except color,background-color)</li>
+		<li>CSS property should be in Camel case</li>
+		<li>Like this... padding-left-------> paddingLeft</li>
+	</ul>
+	<script src="..\JQUERY.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#animatebtton').click(function () {
+				$('#box2').animate({
+					left: '950px'
+				}, 3000);
+				$('#box2').animate({
+					width: '+=100px'
+				}, 3000);
+				$('#box2').animate({
+					fontSize: '25px',
+					fontFamily: 'Miriam'
+				}, "slow");
+				$('#box2').animate({
+					borderWidth: '10px'
+				}, 1000);
+				$('#box2').animate({
+					top: '400px'
+				}, 3000);
+				$('#box2').animate({
+					left: '25px'
+				}, 3000);
+				$('#box2').animate({
+					left: '400px'
+				}, 3000);
+				$('#box2').animate({
+					top: '1000px'
+				}, 3000);
+				$('#box2').animate({
+					height: '+=300px'
+				}, 3000);
+				$('#box2').animate({
+					fontSize: '55px',
+					fontFamily: 'Miriam'
+				}, "slow");
+
+				$('#box2').animate({
+					width: '+=100px'
+				}, 3000);
+
+				//width: '200px'
+
+				//width:'+=100px',
+				//width:'hide',
+				//width:'toggle',
+				//fontSize:'25px',
+				//borderWidth:'10px',
+
+			});
+		});
+	</script>
+</body>
+
+</html>

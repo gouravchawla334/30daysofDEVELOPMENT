@@ -1,0 +1,77 @@
+-items<html>
+
+<head>
+	<style>
+		#first {
+			width: 300;
+			height: 150px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: yellow;
+		}
+
+		#second {
+			width: 300;
+			height: 150px;
+			margin: 40px;
+			padding: 10px;
+			align-items: center;
+			border: 1px solid black;
+			background: orange;
+		}
+
+		#outer {
+			border: 1px solid black
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Gourav Creations</h1>
+	<div id='outer'>
+		<div id="first">
+			<p>Hello and wolcome to my<b> world</b></p>
+			<p>THIS IS GOURAV CREATIONS...!!!!!!!!!!!!!!!!!!</p>
+		</div>
+
+		<ul>
+			<li>ORANGE</li>
+			<li>MANGO</li>
+			<li><span>APPLE</span></li>
+			<li>MANGO</li>
+		</ul>
+
+
+		<p class="p1">Hello and wolcome to my world</p>
+		<p>THIS IS <span class="te">GOURAV CREATIONS</span>...!!!!!!!!!!!!!!!!!!</p>
+	</div><br><br>
+
+	<h3>HAS AND IS METHODS</h3>
+	<ol>
+		<li>has() ...it target the tag which are child of other tag.Like here span tag is child of p tag</li>
+		<li>is() ...It is used only with the IF() statement {EITHER TRUE OR FALSE}</li>
+	</ol>
+
+	<script src="..\JQUERY.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('p').has('b,span').css('background','pink');	
+			$('p').has('.te').css('background','blue');	
+
+
+			$('p').click(function () {
+				if ($(this).parent().is('div')) {
+					$(this).css('background', 'red');
+				}
+			});
+
+
+		});
+	</script>
+
+</body>
+
+</html>

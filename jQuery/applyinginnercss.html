@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>
+body{font-family:arial}
+#box{padding:10px;border:1px solid #222}
+</style>
+</head>
+<body>
+<h1>GOURAV CREATIONS</h1>
+<div id="box">
+<h2>text box</h2>
+<p>hello and welcome to my world</p>
+</div><br>
+<button id="stylebutton"> APPLY CSS3</button>
+<script src="..\JQUERY.js"></script>
+<script>
+$(document).ready(function(){
+	$('#stylebutton').click(function(){
+		//$('#box').css('background','yellow');
+		$('#box').css({'background':'yellow','color':'blue','border':'5px dotted aqua'});
+		});
+
+});
+</script>
+</body>
+</html>
