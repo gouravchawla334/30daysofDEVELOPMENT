@@ -1,0 +1,27 @@
+#btn{
+    color: white;
+    background-color: blue;
+    size: 55px;
+    padding: 29px;
+    border-radius: 15px;
+    font-size: large;
+    cursor: pointer;
+    font-style: oblique;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    margin-left: 355px;
+    margin-right: 355px;
+
+
+}
+#btn:hover{
+    background-color: red;
+    
+}
+.container{
+    border: 5px solid black;
+
+}
+.bg{
+    background-color: GREEN;;
+}
