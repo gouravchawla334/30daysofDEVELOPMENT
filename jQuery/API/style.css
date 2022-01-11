@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 500px;
+    width: 500px;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(141, 111, 240);
+    color: black;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+}
+
+p,
+input {
+    margin-top: 20px;
+    margin-left: 120px;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+
+}
+
+.btn {
+    background-color: greenyellow;
+    height: 35px;
+    width: 95px;
+    transform: translate(190%, 100%);
+    color: black;
+    font-weight: bolder;
+    font-size: medium;
+
+}
+
+.btn:hover {
+    background-color: red;
+    color: white;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+
+#change_img {
+    margin-left: 120px;
+    height: 200px;
+    width: 180px;
+    color: white;
+    font-size: larger;
+
+}
+
+#change_name {
+    color: white;
+    background-color: brown;
+    height: 50px;
+    width: 170px;
+    text-align: center;
+    border: 3px solid yellow;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* section 02 */
+/* .d2{
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    height: 100px;
+    width: 500px;
+    /* margin-top: 20px; */
+    transform: translate(-50%, -50%);
+    background-color: rgb(141, 111, 240);
+    color: black;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+} */

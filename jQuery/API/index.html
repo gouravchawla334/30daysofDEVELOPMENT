@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200&display=swap" rel="stylesheet"><title>Document</title>
+</head>
+
+<body>
+    <h1>WHAT DOES YOUR NAME SAYS ABOUT YOUR PERSONALITY?</h1>
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <p>ENTER YOUR NAME</p>
+                <input type="text" name="" id="change_name">
+                <br><br>
+                <img src="./images1.jpg" alt="404 NOT FOUND" id="change_img">
+                <br>
+                <button class="btn"> CLICK ME </button><br>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div class="d2">
+            <input type="text" id="change_name">
+            <br><br>
+            <img src="./images1.jpg" alt="404 NOT FOUND" id="change_img">
+            <br>
+            <button id="btn">Display</button>
+
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../JQUERY.js"></script>
+    <script>
+        // $(document).ready(function () {
+        //     $('button').click(function () {
+        //         const a = $('#change_name').val();
+        //         alert(a);
+        //         $('#change_img').attr('src', `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=AHhl6S0VnztYpi2UNqXE92Xe5Kj0VyCi`);
+        //     });
+
+        $.get({
+  url: "https://api.giphy.com/v1/gifs/search?q=cat+funny&api_key=dc6zaTOxFJmzC&rating=pg",
+  success: function(result) {
+    console.log(result)
+  },
+  error: function(error) {
+    console.log(error);
+  }
+});
+            
+
+            // https://joeschmoe.io/api/v1/${a}
+        });
+    </script>
+    <!-- <script>
+
+    function sendApiRequest(){
+        var userInput = document.getElementById("txt2").value;
+        alert(userInput);
+
+        var giphyApiKey = "";
+        var url = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=${giphyApiKey}`;
+
+        fetch(url).then(function(data) {
+            return data.json();
+            
+        });
+        .then(function(json){
+            console.log(json.data[0].images.fixed_height.url);
+            var imgPath = json.data[0].images.fixed_height.url
+            var img = document.createElement("img")
+            img.setAttribute("src",imgPath)
+            document.body.appendChild(img)
+        })
+    }
+
+
+    </script> -->
+</body>
+
+</html>

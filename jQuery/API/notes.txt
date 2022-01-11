@@ -1,0 +1,10 @@
+API
+
+Application programming interface (API) in basic terms, 
+just allow applications to communicate with one another.
+
+ An API is the messenger that deliver your request to the provider
+ you're requesting it from and then deliver the response back to you.
+
+An API is not a database, it is an access point to an app that access a database.
+
