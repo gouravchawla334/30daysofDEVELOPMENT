@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* Style the container/contact section */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+
+            <div class="column">
+                <form>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="namebox" name="firstname" placeholder="Your name..">
+
+
+                    <label for="email">Email</label>
+                    <input type="text" id="emilbox" placeholder="Enter Email" name="email" required>
+
+                    <label for="lname">Subject</label>
+                    <input type="text" id="subjectbox" name="lastname" placeholder="Mention subject ">
+
+                    <label for="subject">Message</label>
+                    <textarea id="messbox" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea>
+
+                    <button id="insert"> submit</button>
+                </form>
+            </div>
+
+            <div class="column">
+                <img src="/w3images/map.jpg" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+
+
+    <script id="mainscript">
+        var firebaseConfig = {
+            apiKey: "AIzaSyDnWDxJapq9xM_JpJJKTPMR8YxvGtm1enU",
+            authDomain: "form-2fcba.firebaseapp.com",
+            databaseURL: "https://form-2fcba-default-rtdb.firebaseio.com",
+            projectId: "form-2fcba",
+            storageBucket: "form-2fcba.appspot.com",
+            messagingSenderId: "139374584290",
+            appId: "1:139374584290:web:715735f7b6c446a9c519bb"
+        };
+
+        // Initialize Firebase
+        var app = initializeApp(firebaseConfig);
+
+        //   insert
+
+        var nameV, emailV, subjectV, messV;
+
+        function Ready() {
+            nameV = document.getElementById("namebox").value;
+            emailV = document.getElementById("emailbox").value;
+            subjectV = document.getElementById("subjectbox").value;
+            messV = document.getElementById("messbox").value;
+
+        }
+
+        // code
+
+        document.getElementById("insert").onclick = function () {
+            Ready();
+
+            // write data in database
+            firebase.database().ref('data/'+sNo).set({
+                Name: nameV,
+                Email: emailV,
+                Subject: subjectV,
+                Message: messV
+
+            });
+
+        }
+    </script>
+</body>
+
+</html>
